@@ -52,6 +52,7 @@ python vd_learning.py --game_config_file_path "scenarios/defend_the_line.cfg" --
 python vd_learning.py --game_config_file_path "scenarios/defend_the_line.cfg" --epochs 500 --replay_buffer_size 200000 --log_dir runs/test500all_1
 
 ## Code structure from the base directory:
+<pre>
 .  
 └-- extendedDQN                                    # contains all extended DQN code  
     |-- tests.py                                   # run this to perform tests  
@@ -92,3 +93,4 @@ python vd_learning.py --game_config_file_path "scenarios/defend_the_line.cfg" --
         |-- defend_the_line_no_ammo_penalty.wad    # wad file with +1 for kill and -1 for death  
         |-- defend_the_line.cfg                    # config with +1 for kill, -1 for death & wasted ammo  
         └-- defend_the_line.wad                    # wad file with +1 for kill, -1 for death & wasted ammo  
+</pre>
