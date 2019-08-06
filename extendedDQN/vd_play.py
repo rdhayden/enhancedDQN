@@ -63,6 +63,12 @@ if __name__ == "__main__":
         default=2000,
         help="Number of training steps per epoch. Default: 2000",
     )
+    parser.add_argument(
+        "--health_reward",
+        type=int,
+        default=0,
+        help="sets the reward for negative change in health. Default: 0",
+    )
 
     args = parser.parse_args()
     device = torch.device("cuda" if args.gpu else "cpu")
