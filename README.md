@@ -1,18 +1,18 @@
 # Deep Q learning for ViZDoom
 
 ## Prerequisites
-vizdoom  <https://github.com/mwydmuch/ViZDoom>
-torch
-tqdm
-numpy
-opencV
-scikit-image
-absl-py
-tensorflow
-tensorboardx
-xxhash
-collections
-zlib
+vizdoom  <https://github.com/mwydmuch/ViZDoom>  
+torch  
+tqdm  
+numpy  
+opencV  
+scikit-image  
+absl-py  
+tensorflow  
+tensorboardx  
+xxhash  
+collections  
+zlib  
 may also need to install ffmpeg to play video on linux
 
 ## Arguments
