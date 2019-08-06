@@ -66,11 +66,10 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
     device = torch.device("cuda" if args.gpu else "cpu")
-    window_visible = True
 
     # Initialise the game instance
     game = ExtendedGame(args.game_config_file_path)
-    game.set_window_visible(args.window_visible)
+    game.set_window_visible(True)
     game.init()
 
     # Setup and load the network
