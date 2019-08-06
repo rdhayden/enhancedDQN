@@ -276,11 +276,10 @@ if __name__ == "__main__":
             % (overall_mean, e_mean, e_std, e_min, e_max)
         )
 
-        # periodically save the model
-        if (epoch % args.model_save_interval) == 0:
-            model_file = model_path + "/" + str(epoch) + ".pth"
-            torch.save(train_net.state_dict(), model_file)
-            print("\nSaved model to " + model_file)
+    # save the last model
+    model_file = model_path + "/finalmodel.pth"
+    torch.save(train_net.state_dict(), model_file)
+    print("\nSaved model to " + model_file)
 
     writer.close()
 
