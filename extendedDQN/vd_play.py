@@ -18,7 +18,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--model",
         type=str,
-        default="models/deathAmmoPenalty.pth",
+        default="deathAmmoPenalty.pth",
         help="Boolean to make game window visible. Default: False",
     )
     parser.add_argument(
