@@ -116,12 +116,6 @@ if __name__ == "__main__":
         help="Discount factor to apply to previous rewards. Default: 0.99",
     )
     parser.add_argument(
-        "--model_save_interval",
-        type=int,
-        default=10000,
-        help="Save the model after every X epochs. Default: 10",
-    )
-    parser.add_argument(
         "--log_dir",
         type=str,
         default="./runs",
@@ -262,6 +256,11 @@ if __name__ == "__main__":
                 for layer_idx, weight_sigma_ratio in enumerate(train_net.noisy_layers_sigma_snr()):
                     writer.add_scalar("sigma_snr_layer_%d" % (layer_idx+1),
                                         weight_sigma_ratio, steps)
+        
+        # Save model after the last epoch
+        if epoch == (args.epochs - 1):
+            model_file = model_path + "/model_" + str(epoch) + ".pth"
+            torch.save(train_net.state_dict(), model_file)
 
         # write some stats to stdout for each epoch
         e_mean = np.mean(rewards)
@@ -275,11 +274,6 @@ if __name__ == "__main__":
             "\nOverall mean reward %d epoch mean %d, epoch STD %d, epoch min %d, epoch max %d"
             % (overall_mean, e_mean, e_std, e_min, e_max)
         )
-
-    # save the last model
-    model_file = model_path + "/finalmodel.pth"
-    torch.save(train_net.state_dict(), model_file)
-    print("\nSaved model to " + model_file)
 
     writer.close()
 
