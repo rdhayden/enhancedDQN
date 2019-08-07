@@ -23,7 +23,7 @@ python vd_learning.py -h
 
 ## Play pretrained model for the Enhanced DQN
 
-*Visually plays 1 episode of model/deathAmmoPenalty.pth by default, use -h for more arguments*
+*Visually plays 1 episode of deathAmmoPenalty.pth by default, use -h for more arguments*
 
 python vd_play.py
 
