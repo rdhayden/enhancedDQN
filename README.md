@@ -55,10 +55,11 @@ python vd_learning.py --game_config_file_path "scenarios/defend_the_line.cfg" --
 <pre>
 .  
 └-- extendedDQN                                    # contains all extended DQN code  
+    |-- deathAmmoPenalty.pth                       # pretrained model
+    |-- README.md                                  # this readme 
     |-- tests.py                                   # run this to perform tests  
     |-- vd_learning.py                             # run this to train the model  
-    |-- vd_play.py                                 # play model -h for help  
-    |-- README.md                                  # this readme  
+    |-- vd_play.py                                 # play model -h for help   
     └-- lib  
         |-- __init.py__                            # does not include any initialisation code  
         |-- agent.py                               # agent takes actions, uses buffer etc.  
